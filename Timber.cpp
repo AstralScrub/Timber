@@ -15,6 +15,21 @@ int main()
     // "Style::Fullscreen" is a constant defined by SFML
     RenderWindow window(vm, "Timber", Style::Fullscreen);
 
+    // Create a texture to hold a graphic on the GPU
+    Texture textureBackground;
+
+    // Load a graphic into the texture
+    textureBackground.loadFromFile("graphics/background.png");
+
+    // Create a sprite
+    Sprite spriteBackground;
+
+    // Attach the texture to the sprite
+    spriteBackground.setTexture(textureBackground);
+
+    // Set the spriteBackground to cover the screen
+    spriteBackground.setPosition(0, 0);
+
     // Main Game Loop
     while (window.isOpen())
     {
