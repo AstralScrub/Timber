@@ -13,7 +13,7 @@ int main()
 
     // Create and open a window for the game
     // "Style::Fullscreen" is a constant defined by SFML
-    RenderWindow window(vm, "Timber", Style::Fullscreen);
+    RenderWindow window(vm, "Timber", Style::Resize);
 
     // Create a texture to hold a graphic on the GPU
     Texture textureBackground;
@@ -55,6 +55,7 @@ int main()
         window.clear();
 
         //Draw our game scene here
+        window.draw(spriteBackground);
 
         //Show everything we just drew
         window.display();
